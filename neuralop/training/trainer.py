@@ -188,6 +188,7 @@ class Trainer:
                         lr = pg['lr']
                         values_to_log['lr'] = lr
                     wandb.log(values_to_log, step=epoch, commit=True)
+        return msg
 
     def evaluate(self, model, loss_dict, data_loader, output_encoder=None,
                  log_prefix=''):
